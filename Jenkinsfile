@@ -10,7 +10,7 @@ node {
             '''
     }
     stage('Jenkins Credentials | Decrypt API KEY') {
-      withCredentials([string(credentialsId: '<copied-jenkins-api-id>',
+      withCredentials([string(credentialsId: 'a18c55cd-dc82-4217-a0fe-aabdb08040b2',
                               variable: 'secretText')]) {
         apiKey = "\nAPI key: ${secretText}\n"
         sh '''
